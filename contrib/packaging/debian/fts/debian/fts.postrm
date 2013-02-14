@@ -9,10 +9,20 @@ if [ "$1" = "purge" ] ; then
     delgroup --quiet --system tftpd > /dev/null || true
 
     # Remove configuration file
-    rm -f /etc/fts/config
-    if [ -d "/etc/fts" ]; then
-        rmdir "$f" || { chown root:root "$f" && chmod 00700 "$f"; }
-    fi
+	ftsconfig=/etc/fts/config
+
+	for ext in '~' '%' .bak .ucf-new .ucf-old .ucf-dist; do
+		rm -f "$ftsconfig$ext"
+	done
+
+	rm -f $ftsconfig
+
+	if which ucf >/dev/null; then
+		ucf --purge $ftsconfig
+	fi
+	if which ucfr >/dev/null; then
+		ucfr --purge fts $ftsconfig
+	fi
 
     # See if there's some stuff that is not created by us
     db_version 2.0
