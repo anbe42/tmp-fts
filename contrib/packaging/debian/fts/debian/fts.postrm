@@ -9,7 +9,7 @@ if [ "$1" = "purge" ] ; then
     delgroup --quiet --system tftpd > /dev/null || true
 
     # Remove configuration file
-    rm /etc/fts/config
+    rm -f /etc/fts/config
     if [ -d "/etc/fts" ]; then
         rmdir "$f" || { chown root:root "$f" && chmod 00700 "$f"; }
     fi

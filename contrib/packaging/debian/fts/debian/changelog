@@ -2,6 +2,8 @@ fts (1.1-1.1) UNRELEASED; urgency=low
 
   * Non-maintainer upload.
   * Update Homepage and Vcs URLs to https://github.com/gonicus/fts.
+  * fts.postrm: Do not fail to purge if the config file is not there.
+    (Closes: #674007)
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 14 Feb 2013 02:10:51 +0100
 
