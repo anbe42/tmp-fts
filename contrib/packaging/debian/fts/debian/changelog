@@ -11,6 +11,7 @@ fts (1.1-1.1) UNRELEASED; urgency=low
     /usr/share/doc/fts/config (Policy 12.3).
   * Do not ship /etc/fts/config as a conffile, postinst generates it.
   * Register and purge /etc/fts/config with ucf/ucfr.
+  * Ship empty /var/lib/tftpboot directory.
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 14 Feb 2013 02:10:51 +0100
 
