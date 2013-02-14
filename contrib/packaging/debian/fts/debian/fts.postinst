@@ -36,7 +36,7 @@ case "$1" in
 
 	# Apply to config
 	sed -e "s~^path\s*=\s*/.*$~path = $tftppath/pxelinux.cfg~" \
-		-e "s~^static-path\s*=\s*/.*$~static-path = $tftppath/pxelinux.static~" /usr/share/doc/fts/config > /etc/fts/config.debconf-tmp
+		-e "s~^static-path\s*=\s*/.*$~static-path = $tftppath/pxelinux.static~" /usr/share/fts/config > /etc/fts/config.debconf-tmp
 	ucf --three-way --debconf-ok /etc/fts/config.debconf-tmp /etc/fts/config
 	rm -f /etc/fts/config.debconf-tmp || true
 	;;

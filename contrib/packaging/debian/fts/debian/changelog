@@ -7,6 +7,9 @@ fts (1.1-1.1) UNRELEASED; urgency=low
   * fts.postrm: Fix debconf usage during purge. Load the module before doing
     any actions (this re-execs the postinst). Move #DEBHELPER# token to the
     end s.t. we can do db_get before db_purge is run.
+  * Ship default config as /usr/share/fts/config, postinst may not rely on
+    /usr/share/doc/fts/config (Policy 12.3).
+  * Do not ship /etc/fts/config as a conffile, postinst generates it.
 
  -- Andreas Beckmann <anbe@debian.org>  Thu, 14 Feb 2013 02:10:51 +0100
 
