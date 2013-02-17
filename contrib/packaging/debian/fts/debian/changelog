@@ -1,6 +1,6 @@
-fts (1.1-1.1) UNRELEASED; urgency=low
+fts (1.1-1.1) unstable; urgency=low
 
-  * Non-maintainer upload.
+  * Non-maintainer upload with maintainer approval.  (Closes: #700535)
   * Update Homepage and Vcs URLs to https://github.com/gonicus/fts.
   * fts.postinst: Fix the check for user 'tftpd' being in group 'fuse'.
   * fts.postrm: Do not fail to purge if the config file is not there.
@@ -14,7 +14,7 @@ fts (1.1-1.1) UNRELEASED; urgency=low
   * Register and purge /etc/fts/config with ucf/ucfr.
   * Ship empty /var/lib/tftpboot directory.
 
- -- Andreas Beckmann <anbe@debian.org>  Thu, 14 Feb 2013 02:10:51 +0100
+ -- Andreas Beckmann <anbe@debian.org>  Sun, 17 Feb 2013 01:09:01 +0100
 
 fts (1.1-1) unstable; urgency=low
 
