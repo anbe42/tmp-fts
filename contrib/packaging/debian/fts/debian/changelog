@@ -2,6 +2,7 @@ fts (1.1-1.1) UNRELEASED; urgency=low
 
   * Non-maintainer upload.
   * Update Homepage and Vcs URLs to https://github.com/gonicus/fts.
+  * fts.postinst: Fix the check for user 'tftpd' being in group 'fuse'.
   * fts.postrm: Do not fail to purge if the config file is not there.
     (Closes: #674007)
   * fts.postrm: Fix debconf usage during purge. Load the module before doing

@@ -20,8 +20,8 @@ case "$1" in
                     --group tftpd
         fi
 
-	# Do we need to add the fuse user?
-	getent group fuse | grep -q "[,:]$DAEMON_USER\(,\|$\)" || adduser tftpd fuse
+	# Do we need to add the tftpd user to the fuse group?
+	getent group fuse | grep -q "[,:]tftpd\(,\|$\)" || adduser tftpd fuse
 
 	# Create pxelinux.cfg path
 	[ ! -d "$tftppath/pxelinux.cfg" ] && mkdir -p "$tftppath/pxelinux.cfg"
